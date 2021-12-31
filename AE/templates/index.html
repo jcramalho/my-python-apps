@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} Envio de Autos de Eliminação (CLAV) {% endblock %}
+
+{% block content %}
+    <div class="w3-container w3-teal">
+        <h1>Envio de Autos de Eliminação (CLAV)</h1>
+    </div>
+    <div class="w3-container">
+        <header class="w3-container w3-light-grey">
+            <h4>AE a importar:</h4> 
+        </header>
+    </div>
+    <div class="w3-container w3-card-4">
+        <form class="w3-container" method="POST" action="/processos/processo">
+            <div class="w3-row">
+                <div class="w3-col s6">
+                    <input class="w3-input" type="text" placeholder="Tipo de fonte de legitimação" name="fonte"/>
+                    <input class="w3-input" type="text" placeholder="Número do diploma: num/ano" name="numDiploma"/>
+                </div>
+                <div class="w3-col s6">
+                    <input class="w3-input" type="file" placeholder="Ficheiro CSV com as classes" name="classes"/>
+                    <input class="w3-input" type="file" placeholder="Ficheiro CSV com as agregações" name="agregacoes"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+ 
+{% endblock %}
